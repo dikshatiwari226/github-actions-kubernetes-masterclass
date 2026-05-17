@@ -1,5 +1,5 @@
 
-# hadolint ignore=DL3008,DL3018
+# hadolint ignore=DL3018
 
 ########################################
 # Stage 1: Dependencies
