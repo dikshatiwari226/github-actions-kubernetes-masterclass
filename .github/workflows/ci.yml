@@ -72,7 +72,9 @@ jobs:
         with:
           context: ./backend
           push: true
-          tags: dikshatiwari226/skillpulse-backend:latest
+          tags: |
+           ${{ secrets.DOCKERHUB_USERNAME }}/skillpulse-backend:latest
+           ${{ secrets.DOCKERHUB_USERNAME }}/skillpulse-backend:${{ github.sha }}
 
       # Build Frontend
       - name: Build Frontend Image
@@ -80,7 +82,9 @@ jobs:
         with:
           context: ./frontend
           push: true
-          tags: dikshatiwari226/skillpulse-frontend:latest
+          tags: |
+           ${{ secrets.DOCKERHUB_USERNAME }}/skillpulse-backend:latest
+           ${{ secrets.DOCKERHUB_USERNAME }}/skillpulse-backend:${{ github.sha }}
 
 
 # =========================
