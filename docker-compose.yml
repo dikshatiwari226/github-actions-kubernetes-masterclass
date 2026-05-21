@@ -22,7 +22,7 @@ services:
       start_period: 30s
     
   backend:
-    image: ${DOCKERHUB_USERNAME}/skillpulse-backend:latest
+    image: dikshatiwari226/skillpulse-backend:v1    
     build: ./backend
     restart: unless-stopped
     networks:
@@ -40,7 +40,7 @@ services:
         condition: service_healthy
 
   frontend:
-    image: ${DOCKERHUB_USERNAME}/skillpulse-frontend:latest
+    image: dikshatiwari226/skillpulse-frontend:v1
     build: ./frontend
     restart: unless-stopped
     networks:
