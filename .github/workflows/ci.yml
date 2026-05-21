@@ -3,10 +3,10 @@ name: SkillPulse CI Pipeline
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - 'k8s/**'
-      - 'docs/**'
-      - '**/*.md'
+    # paths-ignore:
+    #  - 'k8s/**'
+    #  - 'docs/**'
+    #  - '**/*.md'
   workflow_dispatch:
 
 env:
